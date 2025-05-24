@@ -11,7 +11,7 @@ buildscript {
 }
 
 android {
-    namespace = "com.example.kyc_sandbox"
+    namespace = "com.github.lcsz.kyc_sdk_android"
 
     compileSdk = 34
 //    defaultConfig {
