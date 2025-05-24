@@ -30,7 +30,11 @@ android {
         abortOnError = false
     }
     publishing {
-        singleVariant("release")
+        singleVariant("release") {
+            withSourcesJar()
+            // Evita gerar anotações de lint
+            withJavadocJar()
+        }
     }
 }
 
@@ -56,4 +60,9 @@ afterEvaluate {
             }
         }
     }
+}
+
+tasks.withType<org.gradle.api.tasks.bundling.Jar>().configureEach {
+    // Evita incluir javadoc/lint desnecessários
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
