@@ -12,12 +12,12 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         jcenter()
+
+        flatDir {
+            dirs("kyc-sdk/libs")
+        }
     }
 
-    // 👇 Adicione este bloco aqui:
-    flatDir {
-        dirs("kyc-sdk/libs")
-    }
 
 }
 
