@@ -3,6 +3,13 @@ plugins {
     id("maven-publish")
 }
 
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
 android {
     compileSdk = 34
     defaultConfig {
