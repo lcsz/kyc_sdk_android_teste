@@ -14,6 +14,11 @@ dependencyResolutionManagement {
         jcenter()
     }
 
+    // 👇 Adicione este bloco aqui:
+    flatDir {
+        dirs("kyc-sdk/libs")
+    }
+
 }
 
 

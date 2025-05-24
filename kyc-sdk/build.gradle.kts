@@ -38,11 +38,11 @@ android {
     }
 }
 
-repositories {
-    flatDir {
-        dirs("libs")
-    }
-}
+//repositories {
+//    flatDir {
+//        dirs("libs")
+//    }
+//}
 
 //dependencies {
 //    implementation(name = "seu_sdk_flutter", ext = "aar") // sem extensão no nome do arquivo
