@@ -1,5 +1,5 @@
 plugins {
-    id("com.android.library")
+    id("com.android.library") version "8.2.1"
     id("maven-publish")
 }
 
@@ -11,14 +11,15 @@ buildscript {
 }
 
 android {
+    namespace = "com.example.kyc_sandbox"
+
     compileSdk = 34
-    defaultConfig {
-        minSdk = 21
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0.0"
-        consumerProguardFiles("consumer-rules.pro")
-    }
+//    defaultConfig {
+//        minSdk 24
+//        targetSdk 35
+//        versionCode 1
+//        versionName "1.0"
+//    }
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -35,9 +36,9 @@ repositories {
     }
 }
 
-dependencies {
-    implementation(name = "seu_sdk_flutter", ext = "aar") // sem extensão no nome do arquivo
-}
+//dependencies {
+//    implementation(name = "seu_sdk_flutter", ext = "aar") // sem extensão no nome do arquivo
+//}
 
 afterEvaluate {
     publishing {
